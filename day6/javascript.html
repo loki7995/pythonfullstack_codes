@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      a = <input type="text" id="a" /> b = <input type="text" id="b" /> c =
+      <input type="text" id="c" /> d = <input type="text" id="d" />
+
+      <input type="button" value="submit" onclick="large()" />
+      <input type="text" id="r" />
+    </form>
+    <script>
+      function large() {
+        if (a > b && a > c && a > d) {
+          document.getElementById("r").a;
+        } else if (b > a && b > d && b > c) {
+          document.getElementById("r").b;
+        } else if (c > d && c > a && c > b) {
+          document.getElementById("r").c;
+        } else {
+          document.getElementById("r").d;
+        }
+      }
+    </script>
+  </body>
+</html>

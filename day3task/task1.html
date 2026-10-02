@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position and Display Practice</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: #0b272f;
+        font-family: Arial, sans-serif;
+      }
+
+      .scene {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        min-height: 100svh;
+        overflow: hidden;
+        background: #0b272f;
+      }
+
+      .scene-image {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate3d(var(--pointer-x, 0px), var(--pointer-y, 0px), 0)
+          scale(1.05);
+        transition: transform 180ms ease-out;
+        will-change: transform;
+      }
+
+      .new-button {
+        position: absolute;
+        top: 13px;
+        right: 11px;
+        display: inline-block;
+        padding: 12px 16px;
+        border: 0;
+        border-radius: 6px;
+        background: #f10d18;
+        color: #fff;
+        font: inherit;
+        font-size: 20px;
+        line-height: 1.2;
+        cursor: pointer;
+      }
+
+      .new-button:hover {
+        background: #d90813;
+      }
+
+      .new-button:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 2px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .scene-image {
+          transform: none;
+          transition: none;
+          will-change: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="scene">
+        <img
+          class="scene-image"
+          src="../wallpaper4.jpg"
+          alt="A quiet river flowing through a forest beneath distant mountains"
+        />
+
+        <button class="new-button" type="button">NEW</button>
+      </div>
+    </main>
+    <script>
+      const scene = document.querySelector(".scene");
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      );
+
+      scene.addEventListener("pointermove", (event) => {
+        if (reduceMotion.matches || event.pointerType === "touch") return;
+
+        const bounds = scene.getBoundingClientRect();
+        const offsetX = (event.clientX - bounds.left) / bounds.width - 0.5;
+        const offsetY = (event.clientY - bounds.top) / bounds.height - 0.5;
+
+        scene.style.setProperty("--pointer-x", `${offsetX * -16}px`);
+        scene.style.setProperty("--pointer-y", `${offsetY * -16}px`);
+      });
+
+      scene.addEventListener("pointerleave", () => {
+        scene.style.setProperty("--pointer-x", "0px");
+        scene.style.setProperty("--pointer-y", "0px");
+      });
+    </script>
+  </body>
+</html>

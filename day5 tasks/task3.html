@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
+      }
+
+      .header {
+        padding: 34px 20px;
+        background-color: #222;
+        color: white;
+        text-align: center;
+      }
+
+      .header h1 {
+        margin: 10px 0 20px;
+        font-size: 36px;
+      }
+
+      .header p {
+        margin: 0;
+        font-size: 16px;
+      }
+
+      .services {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 44px 20px;
+      }
+
+      .service-card {
+        width: 235px;
+        height: 345px;
+        padding: 30px 25px;
+        border-radius: 16px;
+        background-color: white;
+        box-shadow: 0 8px 18px #cccccc;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .service-card:hover {
+        transform: scale(1.04);
+      }
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 86px;
+        height: 86px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        background-color: orange;
+        font-size: 28px;
+      }
+
+      .service-card h2 {
+        margin: 0 0 18px;
+        font-size: 25px;
+      }
+
+      .service-card p {
+        margin: 0 0 18px;
+        line-height: 1.4;
+      }
+
+      .service-card a {
+        display: inline-block;
+        padding: 12px 22px;
+        border-radius: 6px;
+        background-color: blue;
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Our Services</h1>
+      <p>We Build Digital Solutions</p>
+    </header>
+
+    <main class="services">
+      <section class="service-card">
+        <div class="icon">💻</div>
+        <h2>Web Development</h2>
+        <p>We build modern websites.</p>
+        <a href="#web-development">Learn More</a>
+      </section>
+
+      <section class="service-card">
+        <div class="icon">📱</div>
+        <h2>App Development</h2>
+        <p>We build mobile applications.</p>
+        <a href="#app-development">Learn More</a>
+      </section>
+
+      <section class="service-card">
+        <div class="icon">☁️</div>
+        <h2>Cloud Services</h2>
+        <p>We provide cloud solutions.</p>
+        <a href="#cloud-services">Learn More</a>
+      </section>
+    </main>
+  </body>
+</html>

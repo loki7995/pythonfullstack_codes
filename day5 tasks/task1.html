@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sai Siva - My Website</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #111;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 26px;
+        background-color: #6495ed;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-family: Georgia, serif;
+        font-size: 30px;
+      }
+
+      .search {
+        width: 180px;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 20px;
+      }
+
+      .navigation {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 14px;
+        background-color: #222;
+      }
+
+      .navigation a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .page-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        min-height: 560px;
+      }
+
+      .side-panel {
+        padding: 20px 18px;
+        background-color: #8a2be2;
+      }
+
+      .side-panel h2 {
+        color: white;
+      }
+
+      .side-panel a {
+        display: block;
+        margin: 22px 0;
+        color: #111;
+        text-decoration: none;
+      }
+
+      .main-content {
+        padding: 18px 20px 20px;
+        background-color: #72e3cf;
+      }
+
+      .main-content h2 {
+        text-align: center;
+      }
+
+      .course-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .course {
+        padding: 18px;
+        border-radius: 10px;
+        background-color: white;
+      }
+
+      .course button {
+        padding: 9px 18px;
+        border: none;
+        border-radius: 5px;
+        background-color: #222;
+        color: white;
+        cursor: pointer;
+      }
+
+      .footer {
+        padding: 22px;
+        background-color: #6495ed;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      @media (max-width: 700px) {
+        .page-content {
+          grid-template-columns: 1fr;
+        }
+
+        .side-panel {
+          padding: 10px 18px;
+        }
+
+        .side-panel a {
+          display: inline-block;
+          margin: 8px 14px 8px 0;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .header {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .navigation {
+          flex-wrap: wrap;
+          gap: 14px 22px;
+        }
+
+        .course-list {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Marvel Movies Lover</h1>
+      <input
+        class="search"
+        type="search"
+        placeholder="Search..."
+        aria-label="Search"
+      />
+    </header>
+
+    <nav class="navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="page-content" id="home">
+      <aside class="side-panel">
+        <h2>Menu</h2>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </aside>
+
+      <main class="main-content">
+        <h2>Welcome to My Website</h2>
+        <p>
+          i love marvel movies and i am a web developer. I have created this
+          website to showcase my skills and projects. You can explore the
+          different sections to learn more about me and my work.
+        </p>
+        <p>
+          here are are the some marvel movies which i love the most. you can
+          also check out my skills and projects in the respective sections.
+        </p>
+
+        <section class="course-list" id="services">
+          <article class="course">
+            <h3>IRON MAN 1,2,3</h3>
+            <p>
+              about: tony stark a genius in tech, building AI assistants,nuclear
+              reactors e.t.c.
+            </p>
+            <button type="button">Learn More</button>
+          </article>
+          <article class="course">
+            <h3>THE Avengers</h3>
+            <p>
+              about: a team of superheroes including iron man, thor, hulk,
+              captain america, black widow, and hawkeye.
+            </p>
+            <button type="button">Learn More</button>
+          </article>
+          <article class="course" id="skills">
+            <h3>Loki all seasons</h3>
+            <p>
+              about: the mischievous god of mischief, known for his cunning and
+              shape-shifting abilities.
+            </p>
+            <button type="button">Learn More</button>
+          </article>
+          <article class="course">
+            <h3>Avengers Infinity War</h3>
+            <p>
+              about: a team of superheroes including iron man, thor, hulk,
+              captain america, black widow, and hawkeye.
+            </p>
+            <button type="button">Learn More</button>
+          </article>
+        </section>
+      </main>
+
+      <aside class="side-panel" id="projects">
+        <h2>Latest</h2>
+        <a href="#services">New movies</a>
+        <a href="#projects">latest ongoing projects</a>
+        <a href="#services">New Tutorials</a>
+        <a href="#skills">My Skills</a>
+      </aside>
+    </div>
+
+    <footer class="footer" id="contact">&copy; 2026 Sai Siva Sankar</footer>
+  </body>
+</html>

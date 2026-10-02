@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <form>
+    <input type="text" id="a" />
+    <input type="text" id="b" />
+    <input type="button" id="button" value="click me" onclick="check()" />
+  </form>
+  <body>
+    <script>
+      function check() {
+        age = parseInt(document.getElementById("a"));
+        if (age < 25) {
+          document.write("<h1>25000</h1>");
+        } else if (age > 25 && age < 45) {
+          document.write("<h1>20000</h1>");
+        } else if (age > 41 && age < 60) {
+          document.write("<h1>15000</h1>");
+        } else {
+          document.write("<h1>1000<h2>");
+        }
+      }
+    </script>
+  </body>
+</html>

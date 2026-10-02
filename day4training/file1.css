@@ -1,0 +1,11 @@
+div {
+  width: 100px;
+}
+
+@keyframes an{
+    0%{
+        background-color:aqua;
+
+    }
+    
+}

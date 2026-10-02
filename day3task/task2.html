@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nature Photo Cards</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 19px 10px;
+        background: #f4f4f4;
+        color: #111;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+
+      .card {
+        position: relative;
+        display: block;
+        flex: 1 1 254px;
+        width: min(254px, 100%);
+        max-width: 254px;
+        height: 278px;
+        overflow: hidden;
+        border: 2px solid #171717;
+        background: #fff;
+      }
+
+      .card-image {
+        display: block;
+        width: 100%;
+        height: 166px;
+        object-fit: cover;
+      }
+
+      .card-copy {
+        display: flex;
+        height: 108px;
+        align-items: center;
+        padding: 0 13px;
+      }
+
+      .card-title {
+        display: inline-block;
+        margin: 0;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      @media (max-width: 560px) {
+        .cards {
+          justify-content: center;
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="cards" aria-label="Nature photo cards">
+      <article class="card">
+        <img
+          class="card-image"
+          src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=760&h=500&q=85"
+          alt="Hiker standing on a rocky mountain overlook"
+        />
+        <div class="card-copy">
+          <h2 class="card-title">Mountain</h2>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          class="card-image"
+          src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=760&h=500&q=85"
+          alt="Warm sunset over a distant landscape"
+        />
+        <div class="card-copy">
+          <h2 class="card-title">Nature</h2>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          class="card-image"
+          src="../maldives.jpeg"
+          alt="Turquoise water washing onto a tropical beach"
+        />
+        <div class="card-copy">
+          <h2 class="card-title">Beach</h2>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

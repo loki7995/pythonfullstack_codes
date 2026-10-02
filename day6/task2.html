@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <form>
+      <input type="text" id = "a"/>
+      <input type="text" id = "b"/>
+      <input type ="button" value = "submit" onclick = "loki()"
+      
+    </form>
+  <body>
+    <script>
+        function loki(){
+        a = parseInt(document.getElementById("a").value);
+        if(a > 0){
+            documnet.getElementById("b").value = "+ve";
+       }
+       else if(a < 0){
+            documnet.getElementById("b").value = "-ve";
+       }
+       else {
+            documnet.getElementById("b").value = "NULL";
+       }
+
+    }
+
+
+    </script>
+  </body>
+</html>

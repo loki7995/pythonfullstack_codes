@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Royal Chess Arena</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Strategy board</p>
+          <h1>Royal Chess Arena</h1>
+        </div>
+        <div class="topbar-actions">
+          <button id="new-game" class="primary-btn">New Game</button>
+          <button id="undo-move" class="ghost-btn">Undo</button>
+        </div>
+      </header>
+
+      <main class="arena">
+        <section class="board-panel">
+          <div class="turn-row">
+            <span class="turn-label">Turn</span>
+            <span id="turn-indicator" class="turn-indicator"
+              >White to move</span
+            >
+          </div>
+
+          <div
+            id="board"
+            class="board"
+            aria-label="Chessboard"
+            role="grid"
+          ></div>
+        </section>
+
+        <aside class="sidebar">
+          <div class="sidebar-card">
+            <h2>Game status</h2>
+            <p id="status-text">White to play.</p>
+          </div>
+
+          <div class="sidebar-card">
+            <h2>Rules</h2>
+            <ul>
+              <li>Classic 2-player chess</li>
+              <li>Legal moves only</li>
+              <li>Check and checkmate detection</li>
+              <li>Promotion to queen</li>
+            </ul>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

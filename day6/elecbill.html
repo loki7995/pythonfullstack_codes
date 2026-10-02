@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <form>
+    <input type="text" id="rate" />
+    <input 
+  </form>
+  <body>
+    <script>
+      function calelecbill() {
+        unit = document.getElementById("unit");
+        if (rate > 0 && rate < 100) {
+          document.write(rate * 2);
+        } else if (rate > 100 && rate < 201) {
+          document.write(rate * 3);
+        } else if (rate > 200 && rate < 301) {
+          document.write(rate * 4);
+        } else if (rate > 300 && rate < 401) {
+          document.write(rate * 5);
+        } else if (rate > 400 && rate < 501) {
+          document.write(rate * 6);
+        }
+      }
+    </script>
+  </body>
+</html>

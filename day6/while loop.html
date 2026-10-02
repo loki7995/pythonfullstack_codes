@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      n = 1234;
+      rev = 0;
+      while (n != 0) {
+        r = n % 10;
+        rev = rev * 10 + r;
+        n = parseInt(n / 10);
+      }
+      document.write(rev);
+    </script>
+    <script>
+      /* sum of intitual digits */
+      n = 1234;
+      rev = 0;
+      while (n != 0) {
+        r = n % 10;
+        rev = rev + 1;
+        n = parseInt(n / 10);
+      }
+      document.write(rev);
+    </script>
+    <script>
+      /* */
+
+      dev = 1243;
+      while (dev != 0) {
+        r = dev % 10;
+        if (r % 2 == 0) {
+          document.write(r);
+        }
+        dev = dev / 10;
+      }
+    </script>
+    <script>
+      /* second largest element in integer*/
+      dev = 1234;
+      while (dev != 0) {
+        r = dev % 10;
+        if (r > max) {
+          second = max;
+          max = r;
+        } else if (r > second && r != max) {
+          second = r;
+        }
+        dev = parseInt(dev / 10);
+      }
+      document.write("Second largest digit: " + second);
+    </script>
+  </body>
+</html>

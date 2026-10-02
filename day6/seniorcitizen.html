@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <form>
+    <input type="text" id="a" />
+
+    <input type="button" value="submit" onclick="citizenornot()" />
+    output:
+    <p id="p"></p>
+  </form>
+  <body>
+    <script>
+      function citizenornot() {
+        a = parseInt(document.getElementById("a").value);
+        if (a > 60) {
+          document.getElementById("p").innerHTML = "senior citizen";
+        } else {
+          documnet.getElementById("p").innerHTML = "senior citizen";
+        }
+      }
+    </script>
+  </body>
+</html>
